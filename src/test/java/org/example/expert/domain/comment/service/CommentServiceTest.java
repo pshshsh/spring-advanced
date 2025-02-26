@@ -45,7 +45,7 @@ class CommentServiceTest {
         // TodoRepository에서 빈 값 반환도록 설정함
         given(todoRepository.findById(anyLong())).willReturn(Optional.empty());
 
-        // when
+        // when`
         InvalidRequestException exception = assertThrows(InvalidRequestException.class, () -> {
             commentService.saveComment(authUser, todoId, request);
         });

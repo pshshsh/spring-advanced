@@ -33,7 +33,7 @@ public class JwtUtil {
         byte[] bytes = Base64.getDecoder().decode(secretKey);
         key = Keys.hmacShaKeyFor(bytes);
     }
-
+    // JWT 토큰 생성
     public String createToken(Long userId, String email, UserRole userRole) {
         Date date = new Date();
 
@@ -54,7 +54,7 @@ public class JwtUtil {
         }
         throw new ServerException("Not Found Token");
     }
-
+    //
     public Claims extractClaims(String token) {
         return Jwts.parserBuilder()
                 .setSigningKey(key)
