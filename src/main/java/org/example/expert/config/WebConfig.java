@@ -18,17 +18,17 @@ public class WebConfig implements WebMvcConfigurer {
         resolvers.add(new AuthUserArgumentResolver());
     }
 
-    // 인터셉터 등록
-    public void addInterceptors(InterceptorRegistry registry){
-        registry.addInterceptor(new LogInterceptor())
-            .order(1)
-            .addPathPatterns("/**")
-            .excludePathPatterns(
-                "/auth/signup",
-                "/auth/login",
-                "/css/**",
-                "/*.ico",
-                "/error"
-            );
-    }
+//    // 인터셉터 등록
+//    public void addInterceptors(InterceptorRegistry registry){
+//        registry.addInterceptor(new LogInterceptor())
+//            .order(1)
+//            .addPathPatterns("/**")
+//            .excludePathPatterns(
+//                "/auth/signup",
+//                "/auth/login",
+//                "/css/**",
+//                "/*.ico",
+//                "/error"
+//            );
+//    }
 }
